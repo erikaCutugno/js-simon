@@ -17,8 +17,10 @@
 }
 #btn{
     color: white;
-    background-color: blue;
+    background-color: #0d6efd;
     border-radius: .375rem;
+    border: none;
     padding: .5rem;
-    margin: 1rem auto;
+    margin: 1rem;
+    cursor: pointer;
 }

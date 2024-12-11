@@ -26,7 +26,7 @@ let userNmb = [];
  randomNumberElm.innerHTML = rndNumber
  console.log(randomNumberElm.innerHTML)
 
- let seconds = 4
+ let seconds = 30
  const timer = setInterval(()=>{
     if(seconds === 0){
         randomNumberElm.classList.add("none")
