@@ -7,31 +7,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="timer">4</div>
-    <div id="random-number" ></div>
-    <form id="form-memory">
-        <div>
-            <label for="nmb1"></label>
-            <input id="nmb1" type="number">
-        </div>
-        <div>
-            <label for="nmb2"></label>
-            <input id="nmb2" type="number">
-        </div>
-        <div>
-            <label for="nmb3"></label>
-            <input id="nmb3" type="number">
-        </div>
-        <div>
-            <label for="nmb4"></label>
-            <input id="nmb4" type="number">
-        </div>
-        <div>
-            <label for="nmb5"></label>
-            <input id="nmb5" type="number">
-        </div>
-        <button>Conferma</button>
-    </form>
+    <div class="container">
+        <div id="timer">30</div>
+        <div id="random-number"></div>
+        <form id="form-memory" class="none">
+            <span>Inserisci tutti i numeri che ricordi (l'ordine non è importante)</span>
+            <div class="memory">
+                <label for="nmb1"></label>
+                <input id="nmb1" type="number" min="1" max="100" required>
+
+                <label for="nmb2"></label>
+                <input id="nmb2" type="number" min="1" max="100" required>
+
+                <label for="nmb3"></label>
+                <input id="nmb3" type="number" min="1" max="100" required>
+        
+                <label for="nmb4"></label>
+                <input id="nmb4" type="number" min="1" max="100" required>
+            
+                <label for="nmb5"></label>
+                <input id="nmb5" type="number" min="1" max="100" required>
+            </div>
+            <button id="btn">Conferma</button>
+            <div id="result"></div>
+        </form>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

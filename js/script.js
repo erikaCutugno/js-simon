@@ -13,6 +13,8 @@ const nmb2Elm = document.getElementById("nmb2")
 const nmb3Elm = document.getElementById("nmb3")
 const nmb4Elm = document.getElementById("nmb4")
 const nmb5Elm = document.getElementById("nmb5")
+const btnElm = document.getElementById("btn")
+const resultElm = document.getElementById("result")
 // VARIABLES
 
 let rndNumber = [];
@@ -28,6 +30,7 @@ let userNmb = [];
  const timer = setInterval(()=>{
     if(seconds === 0){
         randomNumberElm.classList.add("none")
+        formElm.classList.remove("none")
         clearInterval(timer)
     } else{
         seconds--
@@ -44,18 +47,19 @@ let userNmb = [];
     userNmb.push(nmb5Elm.value)
 
     let cont= 0;
-    
+    let checkNumber = [];
+
     for(let i = 0; i< userNmb.length; i++){
         for(let j=0; j<rndNumber.length; j++){
-            
-            if(Number(rndNumber[j])=== Number(userNmb[i])){
+            if(rndNumber[j]=== Number(userNmb[i])){
                 cont= cont +1
-                //console.log(cont)
+                checkNumber.push(userNmb[i])
             }
-            //console.log(rndNumber[j], userNmb[i])
-
         }
     }
-    console.log(cont)
+    const result = (`Hai indovinato ${cont} numeri! (${checkNumber})`)
+    resultElm.innerHTML = result
+    btnElm.disabled= true
+    
 })
 
